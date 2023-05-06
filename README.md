@@ -65,7 +65,7 @@ The process for creating a User Based recommendation system is as follows:
 We are going to compare all users (not really all !!!) to our specified user and find the one that is most similar.
 We're going to find out how similar each user is to the input through the Pearson Correlation Coefficient. It is used to measure the strength of a linear association between the two variables. 
 </br>
-** Pearson correlation ** is invariant to scaling, i.e. multiplying all elements by a nonzero constant or adding any constant to all elements. This is a pretty important property in recommendation systems because, for example, two users might rate two series of items totally differently in terms of absolute rates, but they would be similar users (i.e. with similar ideas) with similar rates in various scales. 
+**Pearson correlation** is invariant to scaling, i.e. multiplying all elements by a nonzero constant or adding any constant to all elements. This is a pretty important property in recommendation systems because, for example, two users might rate two series of items totally differently in terms of absolute rates, but they would be similar users (i.e. with similar ideas) with similar rates in various scales. 
 
 ![Corrlation coefficinet formaula image](https://editor.analyticsvidhya.com/uploads/39170Formula.JPG)
 
