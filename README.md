@@ -44,3 +44,40 @@ movieId is an identifier for movies used by <https://movielens.org>. imdbId is a
 >               movieId,imdbId,tmdbId
                 
                 
+
+### Packages used in this program:
+```
+pip install matplotlib pandas numpy
+```
+
+## Details about filtering method used in this program:
+Collaborative Filtering( also known as User-User Filtering) technique uses other users data to recommend items to the input user. It attempts to find users that have similar preferences and opinions as the input and then recommends items that they have liked to the input. The method one we will be using here is going to be based on the `Pearson Correlation Function`.
+
+![Image of description of filtering method](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork/labs/Module%205/images/User_Item.png)
+
+The process for creating a User Based recommendation system is as follows:
+1. Select a user with the movies the user has watched
+2. Based on his rating of the movies, find the top X neighbours
+3. Get the watched movie record of the user for each neighbour
+4. Calculate a similarity score using some formula
+5. Recommend the items with the highest score
+</br>
+We are going to compare all users (not really all !!!) to our specified user and find the one that is most similar.
+We're going to find out how similar each user is to the input through the Pearson Correlation Coefficient. It is used to measure the strength of a linear association between the two variables. 
+</br>
+** Pearson correlation ** is invariant to scaling, i.e. multiplying all elements by a nonzero constant or adding any constant to all elements. This is a pretty important property in recommendation systems because, for example, two users might rate two series of items totally differently in terms of absolute rates, but they would be similar users (i.e. with similar ideas) with similar rates in various scales. 
+
+![Corrlation coefficinet formaula image](https://editor.analyticsvidhya.com/uploads/39170Formula.JPG)
+
+The values given by the formula vary from r = -1 to r = 1, where 1 forms a direct correlation between the two entities (it means a perfect positive correlation) and -1 forms a perfect negative correlation. In our case, a 1 means that the two users have similar tastes while a -1 means the opposite.
+</br>
+
+## Advantages and Disadvantages of Collaborative Filtering
+### Advantages
+* Takes other user's ratings into consideration
+* Doesn't need to study or extract information from the recommended item
+* Adapts to the user's interests which might change over time
+### Disadvantages
+* Approximation function can be slow
+* There might be a low amount of users to approximate
+* Privacy issues when trying to learn the user's preferences
