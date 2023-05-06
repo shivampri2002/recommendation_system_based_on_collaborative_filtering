@@ -1,0 +1,2 @@
+# recommendation_system_based_on_collaborative_filtering
+A simple recommendation system based on collaborative filtering technique
